@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/MapHibrido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hibrido" />
+
+                <RadioButton
+                    android:id="@+id/MapSatelital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Satelital" />
+
+                <RadioButton
+                    android:id="@+id/MapTerreno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terreno" />
+
+                <RadioButton
+                    android:id="@+id/MapNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal" />
+
+            <Button
+                android:text="Ver"
+                android:id="@+id/button"
+                android:onClick="tipoMapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+        </RadioGroup>
+        <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/drawPolyline"
+                android:onClick="dibujaPolyline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dibujar polyline" />
+            <Button
+                android:id="@+id/clearPolyline"
+                android:onClick="cleanPolyline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Limpiar Polyline" />
+</LinearLayout>s
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity" />
+
+    </LinearLayout>
+</RelativeLayout>
